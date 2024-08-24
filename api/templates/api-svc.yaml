@@ -1,7 +1,7 @@
 apiVersion: v1 
 kind: Service
 metadata: 
-  name: {{ .Release.Name }}-loadlalancer-svc
+  name: {{ .Release.Name }}-lb
   namespace: {{ .Release.Name }}-ns
 spec:
   selector:
