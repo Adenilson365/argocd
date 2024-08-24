@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-dp
+  labels:
+    app: api
+  namespace: api-ns
+spec:
+  selector:
+    matchLabels:
+      app: app-api
+  template:
+    metadata:
+      labels:
+        app: app-api
+    spec:
+      containers:
+        - name: cont-api
+          image: adenilsonkon/api-python:{{values.api.tag}}
+          ports: 
+            - containerPort: 8000
+              name: http-api
+  replicas: 2
