@@ -1,2 +1,2 @@
 api: 
-  tag: v1
+  image: adenilsonkon/api-python:v1

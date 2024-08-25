@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: {{ .Release.Name }}-cont-api
-          image: adenilsonkon/api-python:latest
+          image: {{ .values.api.image }}
           ports: 
             - containerPort: 8000
               name: http-api
